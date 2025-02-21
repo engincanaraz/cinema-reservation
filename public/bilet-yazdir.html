@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biletiniz - CINEGO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bilet-yazdir.css">
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket">
+            <div class="ticket-header">
+                <div class="ticket-number"></div>
+            </div>
+            <div class="ticket-content">
+                <h1 class="movie-title"></h1>
+                <div class="ticket-info">
+                    <div class="info-group">
+                        <span class="label">Sinema:</span>
+                        <span class="theater"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="label">Tarih:</span>
+                        <span class="date"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="label">Seans:</span>
+                        <span class="time"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="label">Koltuk:</span>
+                        <span class="seats"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="label">Toplam:</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+                <div class="qr-code" id="qr-code">
+                    <canvas id="qr-canvas">
+                        
+                    </canvas>
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <p>İyi seyirler dileriz!</p>
+                <div class="validity-notice">
+                    Bu bilet üzerinde yazan tarih ve saat dışında kullanılamaz ve sadece <span class="avm-name"></span> Cinego sinemalarında geçerlidir.
+                </div>
+                <small>Bu bilet CINEGO'ya aittir. © 2025</small>
+            </div>
+            <div class="ticket-tear">
+                <div class="tear-line"></div>
+            </div>
+        </div>
+        <div class="actions">
+            <button onclick="window.print()" class="print-btn">
+                <i class="fas fa-print"></i> Bileti Yazdır
+            </button>
+            <a href="index.html" class="home-btn">
+                <i class="fas fa-home"></i> Ana Sayfaya Dön
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="js/bilet-yazdir.js"></script>
+</body>
+</html> 

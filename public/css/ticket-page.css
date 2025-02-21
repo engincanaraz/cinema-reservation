@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #1e4d92;
+    --secondary-color: #e91e63;
+    --text-color: #ffffff;
+    --background-color: #242333;
+    --seat-empty: #444451;
+    --seat-selected: #6feaf6;
+    --seat-occupied: #ffffff;
+    --seat-vip: #ffd700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cinema-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Film Bilgileri */
+.movie-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.movie-poster {
+    width: 150px;
+    height: 225px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-details h2 {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.price-info {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Perde */
+.screen-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.screen {
+    background: linear-gradient(to bottom, #fff, #aaa);
+    height: 70px;
+    width: 100%;
+    transform: rotateX(-30deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-text {
+    transform: rotateX(30deg);
+    font-size: 24px;
+    color: #333;
+}
+
+/* Koltuklar */
+.seats-container {
+    margin-bottom: 30px;
+}
+
+.seats-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    background-color: var(--seat-empty);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.seat.selected {
+    background-color: var(--seat-selected);
+}
+
+.seat.occupied {
+    background-color: var(--seat-occupied);
+    cursor: not-allowed;
+}
+
+.seat.vip {
+    background-color: var(--seat-vip);
+}
+
+.seat:not(.occupied):hover {
+    transform: scale(1.2);
+}
+
+/* Seçim Özeti */
+.selection-summary {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.selected-seats ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.total-price {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.complete-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+    background-color: #d11a56;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .movie-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .price-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seats-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .seats-legend {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+} 

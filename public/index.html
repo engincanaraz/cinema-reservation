@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- header -->
+    <header id="header__home">
+        <div class="movie-slider">
+            <div class="slider-container">
+                <!-- Filmler JavaScript ile buraya eklenecek -->
+            </div>
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="container">
+            <nav class="main-nav">
+                <img src="img/logo.png" alt="" class="main-nav__logo">
+                <ul class="main-nav__items">
+                    <li><a href="index.html" class="active">Vizyondakiler</a></li>
+                    <li><a href="#">Salonlar</a></li>
+                    <li><a href="#">Biletlerim</a></li>
+                    <li><a href="#">Hesabım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Vizyondaki Filmler Section -->
+    <section id="now-playing" class="text-center py-2">
+        <div class="container">
+            <h2 class="section-title">Vizyondaki Filmler</h2>
+            <div class="border-bottom"></div>
+            <div class="lead">
+                Sinemalarda gösterimde olan en yeni filmler
+            </div>
+
+            <div class="movies-grid">
+                <!-- Filmler JavaScript ile buraya eklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="footer-content container">
+            <p>Copyright &copy; 2025. All Rights Reserved.</p>
+
+            <div class="social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/type-writer.js"></script>
+    <script src="js/movieSlider.js"></script>
+</body>
+</html>

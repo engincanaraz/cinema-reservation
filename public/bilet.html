@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilet Al</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ticket-page.css">
+</head>
+<body>
+    <header id="header__inner">
+        <div class="container">
+            <nav class="main-nav">
+                <img src="img/logo.png" alt="" class="main-nav__logo">
+                <ul class="main-nav__items">
+                    <li><a href="index.html">Vizyondakiler</a></li>
+                    <li><a href="about.html">Salonlar</a></li>
+                    <li><a href="projects.html">Biletlerim</a></li>
+                    <li><a href="contact.html">Hesabım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="ticket-booking">
+        <div class="container">
+            <div class="movie-info">
+                <div class="movie-info__backdrop">
+                    <img src="" alt="" id="movie-backdrop">
+                </div>
+                <div class="movie-info__details">
+                    <h1 id="movie-title"></h1>
+                    <div class="movie-meta">
+                        <div class="duration">
+                            <i class="fas fa-clock"></i>
+                            <span id="movie-duration"></span>
+                        </div>
+                    </div>
+                    <p class="movie-description">
+                        Seçtiğiniz film için bilet rezervasyonu yapabilirsiniz. Lütfen önce sinema salonu ve seans seçimi yapınız, ardından koltuklarınızı seçerek rezervasyonunuzu tamamlayabilirsiniz.
+                    </p>
+                </div>
+            </div>
+
+            <div class="session-selection">
+                <div class="theaters">
+                    <h3>Sinema Salonları</h3>
+                    <div class="theater-list">
+                        <div class="theater-item" data-theater="forum">
+                            <h4>Forum İstanbul</h4>
+                            <p class="theater-info">
+                                <i class="fas fa-map-marker-alt"></i> Forum İstanbul AVM
+                            </p>
+                        </div>
+                        <div class="theater-item" data-theater="mall">
+                            <h4>Mall of İstanbul</h4>
+                            <p class="theater-info">
+                                <i class="fas fa-map-marker-alt"></i> Mall of İstanbul AVM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="session-selection" id="session-times" style="display: none;">
+                <div class="sessions">
+                    <h3>Seans Saatleri</h3>
+                    <div class="session-list">
+                        <button class="session-btn" data-time="11:00">11:00</button>
+                        <button class="session-btn" data-time="13:40">13:40</button>
+                        <button class="session-btn" data-time="16:20">16:20</button>
+                        <button class="session-btn" data-time="19:00">19:00</button>
+                        <button class="session-btn" data-time="21:40">21:40</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cinema-hall">
+                <div class="screen">
+                    <div class="screen-text">PERDE</div>
+                </div>
+
+
+                <div class="seats-container" id="seats-container">
+                    <!-- Koltuklar JavaScript ile eklenecek -->
+                </div> <br>
+
+                <div class="seat-legend">
+                 <div class="legend-item">
+                     <div class="seat available"></div>
+                     <span>Boş Koltuk</span>
+                 </div>
+                 <div class="legend-item">
+                     <div class="seat selected"></div>
+                     <span>Seçili Koltuk</span>
+                 </div>
+                 <div class="legend-item">
+                     <div class="seat occupied"></div>
+                     <span>Dolu Koltuk</span>
+                 </div>
+                 <div class="legend-item">
+                     <div class="seat double"></div>
+                     <span>Çift Koltuk</span>
+                 </div>
+             </div>
+
+                <div class="booking-summary">
+                    <div class="selected-seats">
+                        <h3>Seçilen Koltuklar:</h3>
+                        <div id="selected-seats-list"></div>
+                    </div>
+                    <div class="price-summary">
+                        <div class="price-details">
+                            <span>Bilet Fiyatı:</span>
+                            <span>220.00 ₺</span>
+                        </div>
+                        <div class="price-details">
+                            <span>Seçilen Koltuk:</span>
+                            <span id="selected-seat-count">0</span>
+                        </div>
+                        <div class="price-details total">
+                            <span>Toplam:</span>
+                            <span id="total-price">0.00 ₺</span>
+                        </div>
+                    </div>
+                    <button id="complete-booking" class="btn btn-primary">Rezervasyonu Tamamla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bilet.js"></script>
+</body>
+</html> 
