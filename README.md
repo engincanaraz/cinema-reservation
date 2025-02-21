@@ -3,7 +3,8 @@
 Bu proje, modern bir sinema bileti rezervasyon sistemini içermektedir. Kullanıcılar film seçebilir, koltuk rezervasyonu yapabilir ve biletlerini alabilirler.
 ## 📸 Ekran Görüntüleri
 
-![Uploading Beige Minimalist Mood Photo Collage.png…]()
+![Uploading görsel.png…]()
+
 
 
 ## 🚀 Özellikler
